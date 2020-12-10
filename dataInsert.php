@@ -12,8 +12,7 @@
 
 <body>
     <div class="container" style="margin-top: 50px;">
-        <div class="text-center">
-        start -this section show messare-
+        <!-- START <//>alert message<//> -->
             <?php
             if (isset($_GET['msg'])) {
                 $message = $_GET['msg'];
@@ -40,13 +39,13 @@
                 }
             }
             ?>
-            <form action="db_insert.php" method="POST">
+            <!-- END -->
+            <form class="text-center" action="db_insert.php" method="POST">
                 <input type="text" name="title" class="form-control" required><br>
                 <textarea class="form-control" name="quote" style="margin-top: 5px;" required></textarea><br>
                 <button class="btn btn-info" name="btn_insert" type="submit"
                     style="margin-top: 5px;margin-right: 10PX;">INSERT</button>
             </form>
-        </div>
     </div>
 
     <div class="container" style="margin-top: 20px;">

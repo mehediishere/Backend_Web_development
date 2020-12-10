@@ -17,7 +17,7 @@
         $result = "fail";
     }
 
-    header("location:index.php?msg=$result");
+    header("location:dataInsert.php?msg=$result");
 
     mysqli_close($conn);
 ?>
