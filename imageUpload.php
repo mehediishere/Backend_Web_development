@@ -1,6 +1,6 @@
 <?php
-$msg = "";
-$db = mysqli_connect("localhost", "root", "", "testskill");
+include 'db.php';
+$msg = ""; 
 
 // when upload button is clicked
 if (isset($_POST['upload'])) {
@@ -17,7 +17,7 @@ if (isset($_POST['upload'])) {
         $msg = "please select an image";
     }else{
         // Execute query to upload into database
-        mysqli_query($db, $sql);
+        mysqli_query($conn, $sql);
 
         // Now we move the uploaded image into the folder: images
         if (move_uploaded_file($tempname, $folder)) {

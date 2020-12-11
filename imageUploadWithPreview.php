@@ -1,6 +1,6 @@
 <?php
+include 'db.php';
 $msg = "";
-$db = mysqli_connect("localhost", "root", "", "testskill");
 
 // when upload button is clicked
 if (isset($_POST['upload'])) {
@@ -17,7 +17,7 @@ if (isset($_POST['upload'])) {
         $msg = "please select an image";
     } else {
         // Execute query to upload into database
-        mysqli_query($db, $sql);
+        mysqli_query($conn, $sql);
 
         // Now we move the uploaded image into the folder: images
         if (move_uploaded_file($tempname, $folder)) {
@@ -45,8 +45,8 @@ if (isset($_POST['upload'])) {
     <div class="container">
         <form method="POST" action="" enctype="multipart/form-data">
             <div>
-                <input id="imgInp" type="file" name="uploadfile" value="">
-                <img id="blah" src="#" alt="your image" style="width: 100%; height:auto;">
+                <input id="imageInput" type="file" name="uploadfile" value="">
+                <img id="previewImage" src="#" alt="your image" style="width: 100%; height:auto;">
             <div>
             <div style="margin-top:50px;">
                 <button type="submit" name="upload">UPLOAD</button>
@@ -64,14 +64,14 @@ if (isset($_POST['upload'])) {
                 var reader = new FileReader();
 
                 reader.onload = function(e) {
-                    $('#blah').attr('src', e.target.result);
+                    $('#previewImage').attr('src', e.target.result);
                 }
 
                 reader.readAsDataURL(input.files[0]);
             }
         }
 
-        $("#imgInp").change(function() {
+        $("#imageInput").change(function() {
             readURL(this);
         });
     </script>
