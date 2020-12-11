@@ -1,7 +1,7 @@
 # WebDevelopment [-BackEnd-]
 
 ### **About this repository**
-This repository contain documentation, example, necessary approach that we need for our **Backend Web Development** knowledge. Here we focus on **php & mysql** for that. Also you ( our new born developer or forgetfull developer like me (￣▽￣) ) can find the answers of the following most frequently asked questions as most esiest way.
+This repository contain documentation, example & approach that we need for our initial step on **Backend Web Development** knowledge. Here we focus on **php & mysql** for that. Also you ( our new born developer or forgetfull developer like me (￣▽￣) ) can find the answers of the following most frequently asked questions as most esiest way.
 
 **FAQ:**
 1. How to insert data into database?
