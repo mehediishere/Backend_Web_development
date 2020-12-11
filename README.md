@@ -198,3 +198,7 @@ CREATE TABLE table_name(
 ```
 DROP TABLE table_name;
 ```
+>**_Rename column:_**
+```
+ALTER TABLE tableName CHANGE `oldcolname` `newcolname` datatype(length);
+```

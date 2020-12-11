@@ -1,11 +1,11 @@
 <?php
     include 'db.php';
     
-    $heading = $_POST['title'];
+    $index = $_POST['id'];
+    $header = $_POST['title'];
     $description = $_POST['quote'];
 
-    $sql = "INSERT INTO quote (title, quotes) VALUES ('$heading','$description')";
-
+    $sql = "UPDATE quote SET title = '$header', quotes = '$description' WHERE id = '$index'";
     if (mysqli_query($conn, $sql)) 
     {
         // echo "New record created successfully";
@@ -17,7 +17,7 @@
         $output = "fail";
     }
 
-    header("location:dataInsert.php?msg=$output");
+    header("location:dataUpdate.php?msg=$output");
 
     mysqli_close($conn);
 ?>

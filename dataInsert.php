@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>testskill</title>
+    <title>mehediishere</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
     <link rel="stylesheet" href="assets/css/styles.css">
@@ -44,10 +44,12 @@
                 <input type="text" name="title" class="form-control" required><br>
                 <textarea class="form-control" name="quote" style="margin-top: 5px;" required></textarea><br>
                 <button class="btn btn-info" name="btn_insert" type="submit"
-                    style="margin-top: 5px;margin-right: 10PX;">INSERT</button>
+                    style="margin-top: 5px;">INSERT</button>
             </form>
     </div>
-
+    <div class="container">
+        <a style="margin-top: 5px; text-decoration: none;" href="index.php">Go Back</a>
+    </div>
     <div class="container" style="margin-top: 20px;">
         <div class="row">
             <div class="col col-12">

@@ -1,10 +1,9 @@
 <?php
     include 'db.php';
     
-    $heading = $_POST['title'];
-    $description = $_POST['quote'];
+    $index = $_POST['id'];
 
-    $sql = "INSERT INTO quote (title, quotes) VALUES ('$heading','$description')";
+    $sql = "DELETE FROM quote WHERE id = '$index'";
 
     if (mysqli_query($conn, $sql)) 
     {
@@ -17,7 +16,7 @@
         $output = "fail";
     }
 
-    header("location:dataInsert.php?msg=$output");
+    header("location:dataDelete.php?msg=$output");
 
     mysqli_close($conn);
 ?>
