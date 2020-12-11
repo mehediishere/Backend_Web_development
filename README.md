@@ -14,7 +14,7 @@ etc.
 * Editor [Personal recommendation: Atom/Sublime text/Visual Studio Code]
 * Xampp/WampServer [Mainly for local hosting]
 
-## **_Some Common_ SQL Query**🧐
+## **_Some Common_ SQL Query**
 I assume we're already familier with sql queries. So here some common querys to check out at a glance to rememorize again quickly.
 
 ### **_Insert:_**
@@ -201,4 +201,14 @@ DROP TABLE table_name;
 >**_Rename column:_**
 ```
 ALTER TABLE tableName CHANGE `oldcolname` `newcolname` datatype(length);
+```
+>**_TRUNCATE:_**
+
+By using the TRUNCATE TABLE  statement, you delete all data from the table permanently and reset the auto-increment value to zero.
+```
+TRUNCATE TABLE table_name;
+```
+>**_Reset auto increment value using ALTER TABLE statement:_**
+```
+ALTER TABLE table_name AUTO_INCREMENT = value;
 ```

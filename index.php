@@ -14,6 +14,8 @@
         <a class="btn btn-light" style="margin-top: 5px;" href="dataUpdate.php">update</a>
         <a class="btn btn-light" style="margin-top: 5px;" href="dataDelete.php">delete</a>
         <a class="btn btn-light" style="margin-top: 5px;" href="resetIndexAfterDelete.php">reset auto_increment in mysql after delete</a>
+        <a class="btn btn-light" style="margin-top: 5px;" href="imageUpload.php">image upload</a>
+        <a class="btn btn-light" style="margin-top: 5px;" href="imageUploadWithPreview.php">preview image before upload</a>
     </div>
 
     <script src="assets/js/jquery.min.js"></script>
