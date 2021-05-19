@@ -3,6 +3,8 @@
 ### **About this repository**
 This repository contain documentation, example & approach that we need for our initial step on **Backend Web Development** knowledge. Also this will be great help to you if you start not long ago & want to know how actually these applied in real project. Since these are written that way. Here we focus on **php & mysql** for that. Also you ( our new born developer or forgetfull developer like me (￣▽￣) ) can find the answers of the following most frequently asked questions as most esiest way.
 
+> Note : This repo is intended for the beginner so that while learning one doesn't get mess up.
+
 **FAQ:**
 1. How to insert data into database?
 2. How to retrieve data from database?
