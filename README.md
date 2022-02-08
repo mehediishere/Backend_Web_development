@@ -1,7 +1,7 @@
 # WebDevelopment [-BackEnd-]
 
 ### **About this repository**
-This repository contain documentation, basic example & approach for **Backend Web Development** knowledge. Also this will be great help to you if you start not long ago & want to know how actually these applied in real project. Since these are written that way. Here we focus on **php & mysql** for that.
+This repository contain some documentation, basic example & approach for **Backend Web Development**. Here we focus on **php & mysql** for that.
 
 > Note : This repo is intended for the beginner so that while learning one doesn't get mess up.
 
