@@ -32,7 +32,7 @@
 
     <section>
         <h3>PROFILE.</h3>
-        <h3>Session ID : <?php echo session_id(); ?></h3>
+<!--         <h3>Session ID : <?php echo session_id(); ?></h3> -->
         <?php
             if(isset($_SESSION['name'])){
         ?>
