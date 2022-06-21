@@ -214,3 +214,11 @@ TRUNCATE TABLE table_name;
 ```
 ALTER TABLE table_name AUTO_INCREMENT = value;
 ```
+>**_Left join:_**
+```
+SELECT a.id, a.name, a.genericname, b.category, c.name AS manufacturer, a.shelf, a.price, a.manufacturerprice, a.strength, d.unit 
+FROM medicine AS a 
+LEFT JOIN medicine_category AS b ON a.category = b.id 
+LEFT JOIN manufacturer AS c ON a.manufacturer = c.id 
+LEFT JOIN medicine_unit AS d ON a.unit = d.id;
+```
