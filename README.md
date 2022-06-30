@@ -222,3 +222,8 @@ LEFT JOIN medicine_category AS b ON a.category = b.id
 LEFT JOIN manufacturer AS c ON a.manufacturer = c.id 
 LEFT JOIN medicine_unit AS d ON a.unit = d.id;
 ```
+### Get the number of days in a month for a specified year and calendar
+```php
+$d=cal_days_in_month(CAL_GREGORIAN,10,2005);
+echo "There was $d days in October 2005";
+```
