@@ -20,36 +20,36 @@ etc.
 I assume we're already familier with sql queries. So here some common querys to check out at a glance to rememorize again quickly.
 
 ### **_Insert:_**
-```
+```mysql
 INSERT INTO TABLE_NAME (column1, column2, column3,...columnN) VALUES (value1, value2, value3,...valueN);
 ```
 Now if we insert value in the same order as the columns in the table then we can use the following query insted of above one.
-```
+```mysql
 INSERT INTO TABLE_NAME VALUES (value1,value2,value3,...valueN);
 ```
 
 ### **_Select:_**
-```
+```mysql
 SELECT * FROM table_name;
 ```
-```
+```mysql
 SELECT column1, column2, columnN FROM table_name;
 ```
-```
+```mysql
 SELECT column1, column2, columnN FROM table_name WHERE [condition];
 ```
 Example :<br> SELECT ID, NAME, SALARY FROM CUSTOMER WHERE SALARY > 20000;
-```
+```mysql
 SELECT column1, column2, columnN FROM table_name WHERE [condition1] AND [condition2]...AND [conditionN];
 ```
 Example :<br> SELECT ID, NAME, SALARY FROM CUSTOMERS WHERE SALARY > 2000 AND age < 25;
-```
+```mysql
 SELECT column1, column2, columnN FROM table_name WHERE [condition1] OR [condition2]...OR [conditionN]
 ```
 Example :<br> SELECT ID, NAME, SALARY FROM CUSTOMERS WHERE SALARY > 2000 OR age < 25;
 
 ### **_Update:_**
-```
+```mysql
 UPDATE table_name SET column1 = value1, column2 = value2. .., columnN = valueN WHERE [condition];
 ```
 Example :<br>
@@ -59,7 +59,7 @@ Example :<br>
 UPDATE CUSTOMERS SET ADDRESS = 'Pune', SALARY = 1000.00;
 
 ### **_Delete:_**
-```
+```mysql
 DELETE FROM table_name WHERE [condition];
 ```
 Example :<br>
@@ -69,7 +69,7 @@ Example :<br>
 DELETE FROM CUSTOMERS WHERE ID = 6;
 
 ### **_Like:_**
-```
+```mysql
 SELECT FROM table_name
 WHERE column LIKE 'XXXX%'
 
@@ -98,10 +98,10 @@ SELECT * FROM CUSTOMERS WHERE SALARY LIKE '200%'
 
 ### **_Limit:_**
 
-```
+```mysql
 SELECT column_name(s) FROM table_name WHERE condition LIMIT number;
 ```
-```
+```mysql
 SELECT * FROM Customers WHERE Country='Germany' LIMIT 3;
 ```
 MySQL provides a LIMIT clause that is used to specify the number of records to return.
@@ -131,7 +131,7 @@ Notice that the numbers are reversed when you use a comma.
 ### **_Order By :_**
 
 This is used to sort the data in ascending or descending order, based on one or more columns.
-```
+```mysql
 SELECT column-list FROM table_name [WHERE condition]  [ORDER BY column1, column2, .. columnN] [ASC | DESC];
 ```
 Example :<br>
@@ -147,7 +147,7 @@ Note:This would sort the result in the descending order by NAME.
 ### **_Group By :_**
 
 This clause is used to group rows that have the same values.
-```
+```mysql
 SELECT column1, column2 FROM table_name WHERE [ conditions ] GROUP BY column1, column2 ORDER BY column1, column2
 ```
 Example :<br>
@@ -156,7 +156,7 @@ SELECT NAME, SUM(SALARY) FROM CUSTOMERS GROUP BY NAME;
 For more [w3school](https://www.w3schools.com/sql/sql_groupby.asp) [tutorialpoint](https://www.tutorialspoint.com/sql/sql-group-by.htm)
 
 ### **_Join :_**
-```
+```mysql
 SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate FROM Orders INNER JOIN Customers ON Orders.CustomerID=Customers.CustomerID;
 ```
 For details [w3school](https://www.w3schools.com/sql/sql_join.asp)
@@ -165,28 +165,28 @@ For details [w3school](https://www.w3schools.com/sql/sql_join.asp)
 
 This used to combine the result-set of two or more SELECT statements.
 
-```
+```mysql
 SELECT column_name(s) FROM table1 UNION SELECT column_name(s) FROM table2;
 ```
-```
+```mysql
 SELECT column_name(s) FROM table1 UNION ALL SELECT column_name(s) FROM table2;
 ```
 
 ---
 >**_Create database:_**
-```
+```mysql
 CREATE DATABASE DatabaseName;
 ```
 >**_Delete database:_**
-```
+```mysql
 DROP DATABASE DatabaseName;
 ```
 >**_Select database:_**
-```
+```mysql
 USE DatabaseName;
 ```
 >**_Create table:_**
-```
+```mysql
 CREATE TABLE table_name(
    column1 datatype,
    column2 datatype,
@@ -197,25 +197,25 @@ CREATE TABLE table_name(
 );
 ```
 >**_Delete table:_**
-```
+```mysql
 DROP TABLE table_name;
 ```
 >**_Rename column:_**
-```
+```mysql
 ALTER TABLE tableName CHANGE `oldcolname` `newcolname` datatype(length);
 ```
 >**_TRUNCATE:_**
 
 By using the TRUNCATE TABLE  statement, you delete all data from the table permanently and reset the auto-increment value to zero.
-```
+```mysql
 TRUNCATE TABLE table_name;
 ```
 >**_Reset auto increment value using ALTER TABLE statement:_**
-```
+```mysql
 ALTER TABLE table_name AUTO_INCREMENT = value;
 ```
 >**_Left join:_**
-```
+```mysql
 SELECT a.id, a.name, a.genericname, b.category, c.name AS manufacturer, a.shelf, a.price, a.manufacturerprice, a.strength, d.unit 
 FROM medicine AS a 
 LEFT JOIN medicine_category AS b ON a.category = b.id 
@@ -229,6 +229,6 @@ echo "There was $d days in October 2005";
 ```
 
 ### Find product from date range
-```php
-SELECT SUM(`payable`) as pr FROM `purchase` WHERE `store` = '1' and `date` between '2022-07-01' and '2022-07-31';
+```mysql
+SELECT SUM(`payable`) AS pr FROM `purchase` WHERE `store` = '1' AND `date` BETWEEN '2022-07-01' AND '2022-07-31';
 ```
