@@ -227,3 +227,8 @@ LEFT JOIN medicine_unit AS d ON a.unit = d.id;
 $d=cal_days_in_month(CAL_GREGORIAN,10,2005);
 echo "There was $d days in October 2005";
 ```
+
+### Find product from date range
+```php
+SELECT SUM(`payable`) as pr FROM `purchase` WHERE `store` = '1' and `date` between '2022-07-01' and '2022-07-31';
+```
